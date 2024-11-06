@@ -15,6 +15,6 @@ jobs:
 
       - name: Run Bash script
         run: |
-          echo "Hello, World!"
+          ./gradlew packageRelease --stacktrace
           # 这里可以添加其他 Bash 命令
           ls -la
