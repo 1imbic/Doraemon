@@ -16,6 +16,7 @@ jobs:
         uses: actions/setup-java@v2
         with:
           java-version: '11'  # 选择合适的 Java 版本
+          distribution: 'adopt'  # 指定 Java 发行版
 
       - name: Build with Gradle
         run: ./gradlew build
