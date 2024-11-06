@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main
-
+      
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -13,8 +13,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Run Bash script
-        run: |
-          ./gradlew packageRelease --stacktrace
-          # 这里可以添加其他 Bash 命令
-          ls -la
+      - name: Grant execute permission
+        run: chmod +x ./gradlew
+
+      - name: Run Gradle build
+        run: ./gradlew packageRelease --stacktrace
